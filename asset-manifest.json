@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/burger-test-web/static/css/main.35d150dc.css",
+    "main.js": "/burger-test-web/static/js/main.d8d73ee3.js",
+    "index.html": "/burger-test-web/index.html",
+    "main.35d150dc.css.map": "/burger-test-web/static/css/main.35d150dc.css.map",
+    "main.d8d73ee3.js.map": "/burger-test-web/static/js/main.d8d73ee3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35d150dc.css",
+    "static/js/main.d8d73ee3.js"
+  ]
+}
