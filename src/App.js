@@ -59,37 +59,37 @@ const burgerOffer = [
   {
     name: "Burger 1",
     id: 1,
-    image: "./burger/burger-menu-picture.jpg",
+    image: "/burger/burger-menu-picture.jpg",
     ingredients: "150 grama mesa, kukuruz, salata",
   },
   {
     name: "Burger 2",
     id: 2,
-    image: "./burger/burger-menu-picture.jpg",
+    image: "/burger/burger-menu-picture.jpg",
     ingredients: "150 grama mesa, paradajz, krastavac",
   },
   {
     name: "Burger 3",
     id: 3,
-    image: "./burger/burger-menu-picture.jpg",
+    image: "/burger/burger-menu-picture.jpg",
     ingredients: "130 grama mesa, paradajz, luk",
   },
   {
     name: "Burger 1",
     id: 1,
-    image: "./burger/burger-menu-picture.jpg",
+    image: "/burger/burger-menu-picture.jpg",
     ingredients: "150 grama mesa, kukuruz, salata",
   },
   {
     name: "Burger 2",
     id: 2,
-    image: "./burger/burger-menu-picture.jpg",
+    image: "/burger/burger-menu-picture.jpg",
     ingredients: "150 grama mesa, paradajz, krastavac",
   },
   {
     name: "Burger 3",
     id: 3,
-    image: "./burger/burger-menu-picture.jpg",
+    image: "/burger/burger-menu-picture.jpg",
     ingredients: "130 grama mesa, paradajz, luk",
   },
 ];
@@ -98,55 +98,55 @@ const beerOffer = [
   {
     name: "Beer 1",
     id: 1,
-    image: "./beer/beer.jpg",
+    image: "/beer/beer.jpg",
     ingredients: "0.33l, 0,5l, 1l",
   },
   {
     name: "Beer 2",
     id: 2,
-    image: "./beer/beer.jpg",
+    image: "/beer/beer.jpg",
     ingredients: "0.33l, 0,5l, 1l",
   },
   {
     name: "Beer 3",
     id: 3,
-    image: "./beer/beer.jpg",
+    image: "/beer/beer.jpg",
     ingredients: "0.33l, 0,5l, 1l",
   },
   {
     name: "Beer 1",
     id: 1,
-    image: "./beer/beer.jpg",
+    image: "/beer/beer.jpg",
     ingredients: "0.33l, 0,5l, 1l",
   },
   {
     name: "Beer 2",
     id: 2,
-    image: "./beer/beer.jpg",
+    image: "/beer/beer.jpg",
     ingredients: "0.33l, 0,5l, 1l",
   },
   {
     name: "Beer 3",
     id: 3,
-    image: "./beer/beer.jpg",
+    image: "/beer/beer.jpg",
     ingredients: "0.33l, 0,5l, 1l",
   },
   {
     name: "Beer 1",
     id: 1,
-    image: "./beer/beer.jpg",
+    image: "/beer/beer.jpg",
     ingredients: "0.33l, 0,5l, 1l",
   },
   {
     name: "Beer 2",
     id: 2,
-    image: "./beer/beer.jpg",
+    image: "/beer/beer.jpg",
     ingredients: "0.33l, 0,5l, 1l",
   },
   {
     name: "Beer 3",
     id: 3,
-    image: "./beer/beer.jpg",
+    image: "/beer/beer.jpg",
     ingredients: "0.33l, 0,5l, 1l",
   },
 ];
@@ -209,7 +209,7 @@ function MainMenuTrack({ translate, switchLanguage }) {
     <div className="align">
       <div className="logo">
         <img
-          src="./logo/burger-pub-logo2.png"
+          src="/logo/burger-pub-logo2.png"
           alt="Burger Pub Logo"
           className="logo-image"
           onClick={() =>
@@ -280,12 +280,12 @@ function Background({ translate }) {
     <div className="welcome">
       <img
         // src="/burger/Novi-burger.jpg"
-        src="./burger/Novi-burger.jpg"
+        src="/burger/Novi-burger.jpg"
         alt="burger background"
         className="burger-background"
       />
       <img
-        src="./burger/Novi-burger-small.jpg"
+        src="/burger/Novi-burger-small.jpg"
         alt="burger background"
         className="burger-background-small"
       />
@@ -303,7 +303,7 @@ function IconDown({ translate }) {
   return (
     <div className="span-div">
       <div className="icon-down-background">
-        <img src="./icon-down-background/down-picture.png" alt="icon-down" />
+        <img src="/icon-down-background/down-picture.png" alt="icon-down" />
       </div>
       <h1
         className="span"
@@ -340,12 +340,12 @@ function AboutBurgerPub({ burgerPub, translate }) {
     <div className="about-burger-pub" id="about">
       <div className="burger-logo-and-text">
         <img
-          src="./burger-pub-logo/burger.jpeg"
+          src="/burger-pub-logo/burger.jpeg"
           alt="slika"
           className="about-and-menu-image"
         />
         <img
-          src="./burger-pub-logo/some-food.jpeg"
+          src="/burger-pub-logo/some-food.jpeg"
           alt="slika"
           className="about-and-menu-image-middle-and-large"
         />
