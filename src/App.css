@@ -1,0 +1,929 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+IT+Moderna:wght@100..400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* #particles {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+} */
+.App {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.App-header {
+  background-color: #ffffffbb;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+}
+
+.logo {
+  /* position: absolute; */
+  position: fixed;
+  z-index: 999;
+  opacity: 0.5;
+}
+
+.logo-image {
+  width: 5rem !important;
+  height: 5rem !important;
+  margin-top: 5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.main-menu-track {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+.language-switcher {
+  width: 100%;
+  position: absolute;
+  float: left;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+/* .language-flags {
+  width: 3rem;
+  height: 3rem;
+
+  background-color: #ffb001;
+} */
+
+/* buttons */
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #fcfcfd28;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 3rem;
+  width: 5rem;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* buttons */
+
+.main-menu-options {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  margin-top: 5rem;
+  font-family: Roboto;
+  font-optical-sizing: auto;
+}
+
+.hamburger {
+  display: none;
+}
+.background-and-icon-down {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+/* @MEDIA ZA MALE EKRANE */
+
+@media (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+  .logo-image {
+    width: 3rem !important;
+    height: 3rem !important;
+    margin-top: 2rem;
+  }
+
+  .hamburger {
+    display: block;
+    position: fixed;
+    margin-left: 90%;
+    margin-top: 5rem;
+    transform: translate(-100%, 0); /* Fixed translation */
+    flex-direction: column;
+    color: black !important;
+    cursor: pointer;
+    z-index: 9999; /* Ensure hamburger is always on top */
+  }
+
+  .main-menu-options {
+    display: none;
+    position: fixed;
+    top: -4rem;
+    right: 5rem;
+    background-color: white;
+    z-index: 9998;
+    border: 2px solid black;
+    border-radius: 1rem;
+    animation: animacija 0.5s ease-in-out;
+    opacity: 0.8;
+    width: 10rem;
+  }
+
+  .burger-background {
+    display: none;
+    width: 100vw;
+    height: 60vh;
+  }
+  body .burger-background-small {
+    display: block;
+    width: 100vw;
+    height: 60vh;
+    opacity: 0.5;
+  }
+
+  body .dobro-dosli {
+    font-size: 4rem !important;
+  }
+  .na-stranicu {
+    font-size: 2rem;
+  }
+
+  .span {
+    /* margin-top: -5rem !important; */
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 40% !important;
+    color: black;
+    margin-top: -20%;
+    animation: span-animation 2s ease-in-out infinite;
+    /* background: #ffb001; */
+
+    background-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #ffb001 50%,
+      transparent 100%
+    );
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 150% 5rem;
+  }
+
+  .burger-logo-and-text {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-and-menu-image-middle-and-large {
+    display: none !important;
+  }
+  .about-and-menu-image {
+    display: block !important;
+    height: 100vh !important;
+    width: 100% !important;
+    /* position: relative; */
+  }
+  .all-offer {
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  @keyframes span-animation {
+    0% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes animacija {
+    0% {
+      /* left: -20%; */
+      opacity: 0;
+    }
+    100% {
+      /* left: 00%; */
+
+      opacity: 1;
+    }
+  }
+
+  .button {
+    background: #ffffff;
+    border: 2px solid grey;
+    color: grey;
+    width: 4vw !important;
+    border-radius: 30rem;
+    cursor: pointer;
+    height: 4vh !important;
+    font-size: 3rem;
+    animation: 0.5s;
+    transition: 0.5s;
+    text-align: center;
+    font-size: 1rem !important; /* The font-size here overrides the previous one */
+  }
+
+  .burger-list,
+  .beer-list {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    margin-left: 0 !important;
+    /* display: block !important; */
+  }
+  .language-switcher {
+    display: block;
+    margin-top: 10rem;
+  }
+}
+
+/* @MEDIA ZA MALE EKRANE */
+
+/* @MEDIA ZA SREDNJE EKRANE */
+
+@media (max-width: 768px) {
+  .logo-image {
+    width: 3rem !important;
+    height: 3rem !important;
+    margin-top: 2rem;
+  }
+  .burger-logo-and-text {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .language-switcher {
+    display: block;
+    margin-top: 10rem;
+  }
+
+  .about-and-menu-image-middle-and-large {
+    display: block;
+    height: 70vh !important;
+    width: 100% !important;
+  }
+  .about-and-menu-image {
+    display: none;
+    /* position: relative; */
+  }
+
+  .burger-background {
+    display: none;
+    width: 100%;
+    height: 60vh !important;
+  }
+  .burger-background-small {
+    /* display: none; */
+    width: 100%;
+    height: 60vh !important;
+    opacity: 0.5;
+  }
+
+  .span-div {
+    height: 10vh;
+  }
+
+  .span {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 40% !important;
+    color: black;
+
+    animation: span-animation 2s ease-in-out infinite !important;
+
+    background-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #ffb001 50%,
+      transparent 100%
+    );
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 150% 5rem;
+  }
+  .dobro-dosli {
+    font-size: 5rem !important;
+  }
+  .na-stranicu {
+    font-size: 3rem !important;
+  }
+
+  .burger-list,
+  .beer-list {
+    width: 90vw;
+    list-style: none;
+    display: block !important;
+  }
+  .hamburger {
+    display: block;
+    position: fixed;
+    margin-left: 90%;
+    margin-top: 5rem;
+    transform: translate(-100%, 0); /* Fixed translation */
+    flex-direction: column;
+    color: black !important;
+    cursor: pointer;
+    z-index: 9999; /* Ensure hamburger is always on top */
+  }
+
+  .main-menu-options {
+    display: none;
+    position: fixed;
+    top: -4rem;
+    right: 5rem;
+    background-color: white;
+    z-index: 9998;
+    border: 2px solid black;
+    border-radius: 1rem;
+    animation: animacija 0.5s ease-in-out;
+    opacity: 0.8;
+    width: 10rem;
+  }
+  .button {
+    background: #ffffff;
+    border: 2px solid grey;
+    color: grey;
+    width: 4vw !important;
+    border-radius: 30rem;
+    cursor: pointer;
+    height: 4vh !important;
+    font-size: 3rem;
+    animation: 0.5s;
+    transition: 0.5s;
+    text-align: center;
+    font-size: 1rem !important; /* The font-size here overrides the previous one */
+  }
+}
+
+/* @media (min-width: 768px) {
+  .burger-background-small {
+    display: block;
+  }
+  .burger-background {
+    display: none;
+  }
+} */
+
+.span {
+  display: hidden;
+}
+.icon-down-background {
+  display: none;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.active h5 {
+  color: black !important;
+}
+.logo-image {
+  width: 2rem;
+  height: 2rem;
+}
+
+.align {
+  margin-bottom: -1rem;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.all-offer {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Aligns the content to the top */
+  gap: 2rem;
+  /* border: 2px solid black; */
+}
+
+.burgers-popup {
+  width: 90%;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.348);
+}
+
+.burger-image-container,
+.beer-image-container {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .beer-image,
+.burger-image {
+  width: 20rem !important;
+  height: 15rem !important;
+} */
+.p {
+  font-size: 50%;
+}
+.x {
+  width: 2rem !important;
+  /* border-radius: 30rem; */
+  cursor: pointer;
+  height: 2rem !important;
+  font-size: 1rem;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.x:hover {
+  background: #ffefcd;
+  color: #ff0000;
+  transform: scale(1.1);
+}
+
+.align {
+  height: 13rem;
+  border-bottom: 3px solid rgb(255, 255, 255);
+  background-color: #ffb001;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 -12 100 28" preserveAspectRatio="none"%3E%3Cpath d="M0 0C30 05 20 20 60 10C80 0 60 20 120 0V28H0Z" fill="white" /%3E%3C/svg%3E');
+  background-size: contain;
+}
+
+h5 {
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease;
+  text-decoration: none;
+  color: white !important;
+}
+
+h5::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.3s ease;
+}
+
+h5:hover::after {
+  width: 100%;
+}
+
+.h-five-burgers-menu {
+  color: black !important;
+}
+/* .h-five-burgers-menu:hover {
+  border-left: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid rgb(255, 255, 255);
+} */
+
+.welcome {
+  width: 100%;
+  height: 100%;
+  margin-top: -4rem;
+  background-size: contain;
+  background: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-background {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  position: relative;
+}
+
+.dobro-dosli {
+  font-size: 10rem;
+}
+.headers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  /* z-index: 999; */
+  color: rgb(255, 255, 255);
+}
+
+.headers h1,
+.headers h2 {
+  width: 100%;
+}
+
+.left {
+  position: relative;
+  animation: left 2s forwards;
+  color: rgb(255, 255, 255);
+}
+.right {
+  position: relative;
+  animation: right 2s forwards;
+  color: rgb(255, 255, 255);
+}
+
+.na-stranicu {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.5rem;
+  color: #ffb001;
+  text-shadow: 2px 2px 4px #c2c2c2;
+
+  border-bottom: 2px solid grey;
+  border-bottom: 2px solid transparent;
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    grey 50%,
+    transparent 100%
+  );
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+}
+
+@keyframes left {
+  0% {
+    /* left: -20%; */
+    opacity: 0;
+  }
+  100% {
+    /* left: 00%; */
+
+    opacity: 0.7;
+  }
+}
+@keyframes right {
+  0% {
+    /* right: -20%; */
+    opacity: 0;
+  }
+  100% {
+    /* right: 0%; */
+
+    opacity: 0.7;
+  }
+}
+
+.burger-logo-and-text {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: grey; */
+}
+
+.about-and-menu-image {
+  display: none;
+  width: 70%;
+  height: 90vh;
+  position: relative;
+  z-index: -1;
+  /* opacity: 0.5; */
+}
+.about-and-menu-image-middle-and-large {
+  width: 100%;
+  height: 100vh;
+  /* position: relative; */
+  z-index: -1;
+  /* opacity: 0.5; */
+}
+.about-pub {
+  position: absolute;
+}
+.about {
+  opacity: 0.6;
+  animation: 0.5s;
+  transition: 0.5s;
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+}
+
+.about,
+p {
+  color: black;
+  position: relative; /* Position is needed for right property to work */
+  animation: about 1s ease-in-out; /* Use the correct animation name */
+}
+
+.about:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+@keyframes about {
+  0% {
+    /* Uncomment if you want to animate the right position */
+    /* right: -20%;  */
+    opacity: 0; /* Start with opacity 0 */
+  }
+  100% {
+    /* right: 0%; */
+    opacity: 0.7; /* Fade to opacity 0.7 */
+  }
+}
+
+.button {
+  background: #ffffff;
+  border: 2px solid grey;
+  color: grey;
+  width: 50vw !important;
+  border-radius: 30rem;
+  cursor: pointer;
+  height: 5rem;
+  font-size: 3rem;
+  animation: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background-color: #fffcf4;
+  /* color: #ffb001; */
+}
+.open {
+  color: #ffb001;
+  border-top: 4px solid #ffb001;
+}
+.x {
+  background: #ffffff;
+  border: 2px solid #ffb001;
+  margin-bottom: 5rem;
+  color: #ffb001;
+  width: 4rem;
+  border-radius: 30rem;
+  cursor: pointer;
+  height: 3rem;
+  animation: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  animation: 0.5s;
+  transition: 0.5s;
+}
+
+.x:hover {
+  background: #ffefcd;
+  color: #ff0000;
+  transform: scale(1.1);
+}
+
+.burger-list,
+.beer-list {
+  width: 90%;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Use auto-fill for responsiveness */
+  gap: 3rem;
+  margin: 0 auto; /* Centering the grid */
+}
+
+.burger-item,
+.beer-item {
+  position: relative;
+  display: flex; /* Make sure items align in a flex container */
+  flex-direction: column; /* Align content vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  border: 1px solid #ddd; /* Optional, for item borders */
+  padding: 1rem; /* Optional, for spacing inside the item */
+  border-radius: 8px; /* Optional, for rounded corners */
+  background-color: #fff; /* Optional, for background color */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.burger-item:hover,
+.beer-item:hover {
+  background-color: #ffaf012e;
+}
+
+.burger-image-container,
+.beer-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%; /* Ensure containers are full-width for image containers */
+  flex-direction: column; /* Align images vertically */
+}
+
+.burger-image-container img,
+.beer-image-container img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto;
+  border-radius: 8px; /* Optional, rounded corners for images */
+}
+
+/* chat kraj */
+
+.burger-image-container:hover,
+.beer-image-container:hover {
+  cursor: pointer;
+}
+
+.p {
+  color: rgb(168, 168, 168);
+}
+.burger-image,
+.beer-image {
+  /* width: 40%; */
+  height: auto;
+  display: block;
+  cursor: pointer;
+  animation: 1s;
+  transition: transform 0.3s;
+  width: 20rem;
+  height: 15rem;
+}
+
+.burger-image:hover,
+.beer-image:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.252);
+  opacity: 0.8;
+}
+
+.burger-name,
+.beer-name {
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-align: center;
+
+  padding-bottom: 10px;
+
+  border-bottom: 2px solid grey;
+  border-bottom: 2px solid transparent;
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    grey 50%,
+    transparent 100%
+  );
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+
+.google-map {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.our-location {
+  width: 100%;
+  height: 50vh;
+}
+
+.footer {
+  width: 100%;
+  background: #ffb001;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .burger-background {
+    display: none !important;
+  }
+  .burger-background-small {
+    display: block !important;
+    width: 100%;
+    /* height: 100%; */
+    opacity: 0.5;
+  }
+}
+
+@media (min-width: 768px) and (min-height: 1180px) {
+  body .burger-background {
+    display: none !important;
+  }
+  body .burger-background-small {
+    display: block !important;
+    width: 100%;
+    /* height: 100%; */
+    opacity: 0.5;
+  }
+  .about-and-menu-image {
+    display: none !important;
+  }
+  .about-and-menu-image-middle-and-large {
+    display: block;
+    width: 100%;
+    height: 90vh;
+  }
+  .span-div {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .burger-background-small {
+    display: block !important;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+  }
+  .burger-background {
+    display: none !important;
+
+    opacity: 0.5;
+  }
+  .span-div {
+    display: none;
+  }
+}
+
+@media (min-width: 1180px) {
+  .burger-background-small {
+    display: none !important;
+  }
+  .burger-background {
+    display: block !important;
+    opacity: 0.5;
+  }
+  .span-div {
+    display: none;
+  }
+}
